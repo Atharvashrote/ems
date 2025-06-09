@@ -44,7 +44,7 @@ const Login = () => {
             type="password"
             placeholder="enter password"
           />
-          <button className="mt-5 w-full text-white outline-none  border-none bg-emerald-700  py-3 px-5 text-xl rounded-full  placeholder:text-white">
+          <button className="mt-5 w-full text-white outline-none  border-none bg-emerald-800  py-3 px-5 text-xl rounded-full  placeholder:text-white">
             Log In
           </button>
         </form>
