@@ -7,9 +7,9 @@ import AdminDashboard from './componenet/dashboard/AdminDashboard'
 const App = () => {
   return (
     <>
-    {/*<Login />*/}
+    <Login />
     {/*<EmployeeDashboard />*/}
-    <AdminDashboard />
+    {/*<AdminDashboard /> */}
    
     </>
   )
