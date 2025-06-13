@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
-const Login = () => {
-    const [email, setemail] = useState('');
-    const [password, setpassword] = useState('');
+const Login = ({ handleLogin }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-    // Function to handle form submission
   const submitHandler = (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
+    e.preventDefault();
+    handleLogin(email, password);
+    setEmail('');
+    setPassword('');
   };
   // Handle form submission logic here
   console.log("Form submitted Email is:", email , " and Password is:", password);
@@ -26,7 +28,7 @@ const Login = () => {
           <input
           value={email}
           onChange={(e)=> {
-            setemail(e.target.value);
+            setEmail(e.target.value);
           }}
             required
             className="  outline-none  bg-transparent border-2 border-emerald-600  py-3 px-5 text-xl rounded-full placeholder:text-gray-400"
@@ -36,7 +38,7 @@ const Login = () => {
           <input
             value={password}
             onChange={(e)=> {
-              setpassword(e.target.value);
+              setPassword(e.target.value);
             }}
             
             required
