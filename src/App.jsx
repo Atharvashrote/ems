@@ -1,9 +1,9 @@
-import React, { useEffect, useState  } from 'react';
+import React, { useContext, useEffect, useState  } from 'react';
 import Login from './componenet/Auth/Login'
 import EmployeeDashboard from './componenet/dashboard/EmployeeDashboard'
 import AdminDashboard from './componenet/dashboard/AdminDashboard'
 import { getLocalStorage, setLocalStorage } from './utils/LocalStorage'
-
+import { AuthContext } from './context/AuthProvider'
 
 
 
@@ -28,7 +28,8 @@ const handleLogin = (email,password) => {
     }
   }
 
-
+const data = useContext(AuthContext);
+console.log( data);
 
   return (
     <>
