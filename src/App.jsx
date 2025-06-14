@@ -3,7 +3,7 @@ import Login from './componenet/Auth/Login'
 import EmployeeDashboard from './componenet/dashboard/EmployeeDashboard'
 import AdminDashboard from './componenet/dashboard/AdminDashboard'
 import { getLocalStorage, setLocalStorage } from './utils/LocalStorage'
-import { AuthContext } from './context/AuthProvider'
+import AuthProvider, { AuthContext } from './context/AuthProvider'
 
 
 
@@ -35,6 +35,8 @@ console.log( data);
     <>
     {!user ?<Login  handleLogin={handleLogin}/> : ''}
     {user === 'admin' ? <AdminDashboard /> : <EmployeeDashboard />}
+
+    <AuthProvider></AuthProvider>
    
     </>
   )

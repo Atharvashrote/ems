@@ -234,17 +234,14 @@ const admin = [
   }
 ];
 export const setLocalStorage = () => {
-    localStorage.setItem("employees", JSON.stringify(employees));
-    localStorage.setItem("admin", JSON.stringify(admin));
+  localStorage.setItem("employees", JSON.stringify(employees));
+  localStorage.setItem("admin", JSON.stringify(admin));
+};
 
-  
-
-}
+// Get data from localStorage
 export const getLocalStorage = () => {
-    const employees = JSON.parse(localStorage.getItem("employees"));
-    const admin = JSON.parse(localStorage.getItem("admin"));
-    console.log(employees, admin);
-
-}
-
+  const employees = JSON.parse(localStorage.getItem('employees') || 'null');
+  const admin = JSON.parse(localStorage.getItem('admin') || 'null');
+  return { employees, admin };
+};
 
